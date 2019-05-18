@@ -7,15 +7,16 @@
 //
 
 import UIKit
-
-class TableViewCell: UITableViewCell {
+import SwipeCellKit
+class TableViewCell: SwipeTableViewCell {
     
     
     @IBOutlet weak var Amount: UILabel!
     @IBOutlet weak var Model: UILabel!
     @IBOutlet weak var Company: UILabel!
 }
-class TableViewController: UITableViewController, dataTransfer {
+class TableViewController: UITableViewController, SwipeTableViewCellDelegate, dataTransfer {
+    
 
     var table = [Model]()
     override func viewDidLoad() {
@@ -38,10 +39,24 @@ class TableViewController: UITableViewController, dataTransfer {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
+        cell.delegate = self
         cell.Amount.text = table[indexPath.row].amount!.description 
         cell.Company.text = table[indexPath.row].company!
         cell.Model.text = table[indexPath.row].model!
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> [SwipeAction]? {
+        guard orientation == .right else { return nil }
+        
+        let deleteAction = SwipeAction(style: .destructive, title: "Delete") { action, indexPath in
+            self.table.remove(at: indexPath.row)
+            self.tableView.reloadData()
+        }
+        
+        // customize the action appearance
+        
+        return [deleteAction]
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
