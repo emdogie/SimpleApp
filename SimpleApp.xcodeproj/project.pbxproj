@@ -15,6 +15,7 @@
 		EA4E4A172290BB4600220DC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA4E4A152290BB4600220DC9 /* LaunchScreen.storyboard */; };
 		EA4E4A1F2290BB8D00220DC9 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4E4A1E2290BB8D00220DC9 /* TableViewController.swift */; };
 		EA4E4A212290BCDF00220DC9 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4E4A202290BCDF00220DC9 /* Model.swift */; };
+		EAE259EC2291E59800AC5436 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE259EB2291E59800AC5436 /* ViewController2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		EA4E4A182290BB4600220DC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA4E4A1E2290BB8D00220DC9 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		EA4E4A202290BCDF00220DC9 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		EAE259EB2291E59800AC5436 /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,7 +52,6 @@
 				15F3B3368DC12A280AB31E4A /* Pods-SimpleApp.debug.xcconfig */,
 				A4C00A0F9C1023F8762BE7B6 /* Pods-SimpleApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -115,6 +116,7 @@
 			children = (
 				EA4E4A0E2290BB4400220DC9 /* ViewController.swift */,
 				EA4E4A1E2290BB8D00220DC9 /* TableViewController.swift */,
+				EAE259EB2291E59800AC5436 /* ViewController2.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -239,6 +241,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAE259EC2291E59800AC5436 /* ViewController2.swift in Sources */,
 				EA4E4A0F2290BB4400220DC9 /* ViewController.swift in Sources */,
 				EA4E4A1F2290BB8D00220DC9 /* TableViewController.swift in Sources */,
 				EA4E4A0D2290BB4400220DC9 /* AppDelegate.swift in Sources */,

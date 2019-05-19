@@ -58,7 +58,63 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1844" y="135.38230884557723"/>
+            <point key="canvasLocation" x="1918" y="-63"/>
+        </scene>
+        <!--View Controller2-->
+        <scene sceneID="Q5B-Kh-Qbs">
+            <objects>
+                <viewController id="QMB-8w-eko" customClass="ViewController2" customModule="SimpleApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ep1-s7-gHg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Yu-Kg-baW" userLabel="Company">
+                                <rect key="frame" x="87" y="170" width="200" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iPB-zx-ySS" userLabel="Model">
+                                <rect key="frame" x="87.5" y="323" width="200" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="MrK-Sg-Trz"/>
+                                    <constraint firstAttribute="height" constant="21" id="om1-nh-H0y"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sL3-vT-gh8" userLabel="Amount">
+                                <rect key="frame" x="87" y="476" width="200" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="prS-lT-Lxx" firstAttribute="bottom" secondItem="sL3-vT-gh8" secondAttribute="bottom" constant="170" id="5Ec-Bf-8bP"/>
+                            <constraint firstItem="prS-lT-Lxx" firstAttribute="trailing" secondItem="8Yu-Kg-baW" secondAttribute="trailing" constant="88" id="9hv-6d-3nc"/>
+                            <constraint firstItem="8Yu-Kg-baW" firstAttribute="top" secondItem="prS-lT-Lxx" secondAttribute="top" constant="106" id="IgN-CK-pHE"/>
+                            <constraint firstItem="sL3-vT-gh8" firstAttribute="top" secondItem="iPB-zx-ySS" secondAttribute="bottom" constant="132" id="OIx-za-Urf"/>
+                            <constraint firstItem="iPB-zx-ySS" firstAttribute="centerX" secondItem="ep1-s7-gHg" secondAttribute="centerX" id="QUX-3p-6Xt"/>
+                            <constraint firstItem="iPB-zx-ySS" firstAttribute="top" secondItem="8Yu-Kg-baW" secondAttribute="bottom" constant="132" id="Urn-oH-g4c"/>
+                            <constraint firstItem="8Yu-Kg-baW" firstAttribute="leading" secondItem="prS-lT-Lxx" secondAttribute="leading" constant="87" id="YcJ-PK-rFm"/>
+                            <constraint firstItem="iPB-zx-ySS" firstAttribute="centerY" secondItem="ep1-s7-gHg" secondAttribute="centerY" id="ejx-IP-JG1"/>
+                            <constraint firstItem="sL3-vT-gh8" firstAttribute="leading" secondItem="prS-lT-Lxx" secondAttribute="leading" constant="87" id="ffq-sD-SAP"/>
+                            <constraint firstItem="prS-lT-Lxx" firstAttribute="trailing" secondItem="sL3-vT-gh8" secondAttribute="trailing" constant="88" id="fl4-O6-QRO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="prS-lT-Lxx"/>
+                    </view>
+                    <connections>
+                        <outlet property="amount" destination="sL3-vT-gh8" id="5rn-7V-qeT"/>
+                        <outlet property="company" destination="8Yu-Kg-baW" id="eIb-Ak-FV7"/>
+                        <outlet property="model" destination="iPB-zx-ySS" id="uek-m7-HOf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zff-uZ-jBe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1909.5999999999999" y="620.23988005997012"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="0xR-Ku-3KJ">
@@ -120,6 +176,7 @@
                     </navigationItem>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="segue" id="2hr-EB-3PC"/>
+                        <segue destination="QMB-8w-eko" kind="show" identifier="segue2" id="LDd-AQ-HSM"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ThI-JR-SMa" userLabel="First Responder" sceneMemberID="firstResponder"/>

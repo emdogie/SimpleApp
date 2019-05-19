@@ -58,11 +58,19 @@ class TableViewController: UITableViewController, SwipeTableViewCellDelegate, da
         
         return [deleteAction]
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        performSegue(withIdentifier: "segue2", sender: self.table[indexPath.row])
+    }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "segue" {
             let destination = segue.destination as! ViewController
             destination.delegate = self as! dataTransfer
+        } else if segue.identifier == "segue2" {
+            let destination = segue.destination as! ViewController2
+            destination.carModel =  sender as! Model
         }
     }
     @IBAction func addButtonClicked(_ sender: UIBarButtonItem) {
