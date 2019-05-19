@@ -38,5 +38,32 @@ class SimpleAppUITests: XCTestCase {
         app.navigationBars["SimpleApp.View"].buttons["Back"].tap()
         
     }
+    
+    func testAddOne() {
+        
+        let app = XCUIApplication()
+        app.navigationBars["SimpleApp.TableView"].buttons["Add"].tap()
+        
+        let modelTextField = app.textFields["model"]
+        modelTextField.tap()
+        modelTextField.typeText("Toyota")
+        
+        let companyTextField = app.textFields["company"]
+        companyTextField.tap()
+        companyTextField.typeText("Yaris")
+        
+        let amountTextField = app.textFields["amount"]
+        amountTextField.tap()
+        amountTextField.typeText("10")
+        
+        app.buttons["Add"].tap()
+        
+        app.navigationBars["SimpleApp.View"].buttons["Back"].tap()
+        
+        let table = app.tables["mainTable"]
+        XCTAssertEqual(table.cells.count, 3)
+        
+        
+    }
 
 }
