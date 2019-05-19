@@ -16,7 +16,18 @@
 		EA4E4A1F2290BB8D00220DC9 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4E4A1E2290BB8D00220DC9 /* TableViewController.swift */; };
 		EA4E4A212290BCDF00220DC9 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4E4A202290BCDF00220DC9 /* Model.swift */; };
 		EAE259EC2291E59800AC5436 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE259EB2291E59800AC5436 /* ViewController2.swift */; };
+		EAE259F42291EEAF00AC5436 /* SimpleAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE259F32291EEAF00AC5436 /* SimpleAppUITests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EAE259F62291EEAF00AC5436 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA4E4A012290BB4400220DC9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA4E4A082290BB4400220DC9;
+			remoteInfo = SimpleApp;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		15F3B3368DC12A280AB31E4A /* Pods-SimpleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleApp.debug.xcconfig"; path = "Target Support Files/Pods-SimpleApp/Pods-SimpleApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -32,6 +43,9 @@
 		EA4E4A1E2290BB8D00220DC9 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		EA4E4A202290BCDF00220DC9 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		EAE259EB2291E59800AC5436 /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
+		EAE259F12291EEAF00AC5436 /* SimpleAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAE259F32291EEAF00AC5436 /* SimpleAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleAppUITests.swift; sourceTree = "<group>"; };
+		EAE259F52291EEAF00AC5436 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +54,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B608957E5246D86C7A33CEF8 /* Pods_SimpleApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAE259EE2291EEAF00AC5436 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				EA4E4A0B2290BB4400220DC9 /* SimpleApp */,
+				EAE259F22291EEAF00AC5436 /* SimpleAppUITests */,
 				EA4E4A0A2290BB4400220DC9 /* Products */,
 				093C2791183BA7F5AE92195B /* Pods */,
 				0FA0DA562B180C7861003BE0 /* Frameworks */,
@@ -77,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				EA4E4A092290BB4400220DC9 /* SimpleApp.app */,
+				EAE259F12291EEAF00AC5436 /* SimpleAppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -121,6 +144,15 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		EAE259F22291EEAF00AC5436 /* SimpleAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EAE259F32291EEAF00AC5436 /* SimpleAppUITests.swift */,
+				EAE259F52291EEAF00AC5436 /* Info.plist */,
+			);
+			path = SimpleAppUITests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +175,24 @@
 			productReference = EA4E4A092290BB4400220DC9 /* SimpleApp.app */;
 			productType = "com.apple.product-type.application";
 		};
+		EAE259F02291EEAF00AC5436 /* SimpleAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EAE259F82291EEAF00AC5436 /* Build configuration list for PBXNativeTarget "SimpleAppUITests" */;
+			buildPhases = (
+				EAE259ED2291EEAF00AC5436 /* Sources */,
+				EAE259EE2291EEAF00AC5436 /* Frameworks */,
+				EAE259EF2291EEAF00AC5436 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EAE259F72291EEAF00AC5436 /* PBXTargetDependency */,
+			);
+			name = SimpleAppUITests;
+			productName = SimpleAppUITests;
+			productReference = EAE259F12291EEAF00AC5436 /* SimpleAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -155,6 +205,10 @@
 				TargetAttributes = {
 					EA4E4A082290BB4400220DC9 = {
 						CreatedOnToolsVersion = 10.0;
+					};
+					EAE259F02291EEAF00AC5436 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = EA4E4A082290BB4400220DC9;
 					};
 				};
 			};
@@ -172,6 +226,7 @@
 			projectRoot = "";
 			targets = (
 				EA4E4A082290BB4400220DC9 /* SimpleApp */,
+				EAE259F02291EEAF00AC5436 /* SimpleAppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -184,6 +239,13 @@
 				EA4E4A172290BB4600220DC9 /* LaunchScreen.storyboard in Resources */,
 				EA4E4A142290BB4600220DC9 /* Assets.xcassets in Resources */,
 				EA4E4A122290BB4400220DC9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAE259EF2291EEAF00AC5436 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,7 +311,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EAE259ED2291EEAF00AC5436 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAE259F42291EEAF00AC5436 /* SimpleAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EAE259F72291EEAF00AC5436 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA4E4A082290BB4400220DC9 /* SimpleApp */;
+			targetProxy = EAE259F62291EEAF00AC5436 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		EA4E4A102290BB4400220DC9 /* Main.storyboard */ = {
@@ -425,6 +503,44 @@
 			};
 			name = Release;
 		};
+		EAE259F92291EEAF00AC5436 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4J6X3XZMN7;
+				INFOPLIST_FILE = SimpleAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.marekgarczewski.SimpleAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SimpleApp;
+			};
+			name = Debug;
+		};
+		EAE259FA2291EEAF00AC5436 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4J6X3XZMN7;
+				INFOPLIST_FILE = SimpleAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.marekgarczewski.SimpleAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SimpleApp;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -442,6 +558,15 @@
 			buildConfigurations = (
 				EA4E4A1C2290BB4600220DC9 /* Debug */,
 				EA4E4A1D2290BB4600220DC9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EAE259F82291EEAF00AC5436 /* Build configuration list for PBXNativeTarget "SimpleAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAE259F92291EEAF00AC5436 /* Debug */,
+				EAE259FA2291EEAF00AC5436 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
