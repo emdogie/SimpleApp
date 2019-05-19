@@ -65,5 +65,34 @@ class SimpleAppUITests: XCTestCase {
         
         
     }
+    
+    func testAddAndDelete() {
+        
+        let app = XCUIApplication()
+        app.navigationBars["SimpleApp.TableView"].buttons["Add"].tap()
+        
+        let modelTextField = app.textFields["model"]
+        modelTextField.tap()
+        modelTextField.typeText("Toyota")
+        
+        let companyTextField = app.textFields["company"]
+        companyTextField.tap()
+        companyTextField.typeText("Yaris")
+        
+        let amountTextField = app.textFields["amount"]
+        amountTextField.tap()
+        amountTextField.typeText("10")
+        
+        app.buttons["Add"].tap()
+        
+        app.navigationBars["SimpleApp.View"].buttons["Back"].tap()
+        
+        let maintableTable = XCUIApplication().tables["mainTable"]
+        maintableTable.staticTexts["Yaris"].swipeLeft()
+        maintableTable/*@START_MENU_TOKEN@*/.buttons["Delete"]/*[[".cells.buttons[\"Delete\"]",".buttons[\"Delete\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        
+        XCTAssertEqual(maintableTable.cells.count, 2)
+        
+    }
 
 }
